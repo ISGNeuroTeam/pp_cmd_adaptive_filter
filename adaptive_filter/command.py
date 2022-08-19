@@ -7,7 +7,15 @@ from .filters import FilterLMS, Filter, FilterNLMS, FilterRLS
 
 
 class AdaptiveFilterCommand(BaseCommand):
-    # define syntax of your command here
+    """
+    Adaptive filter
+
+    raw_signal:  raw signal
+    desired_signal: desired signal
+    type: type of filter: LMS, NLMS, RLS
+    mu: step of filter
+    filter_size: size of filter
+    """
     syntax = Syntax(
         [
             Positional("raw_signal", required=True, otl_type=OTLType.TEXT),

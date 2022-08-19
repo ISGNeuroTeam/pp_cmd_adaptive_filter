@@ -1,8 +1,15 @@
 # pp_cmd_adaptive_filter
 Postprocessing command "adaptive_filter"
 
+Adaptive filter
+    
+    raw_signal:  raw signal
+    desired_signal: desired signal
+    type: type of filter: LMS, NLMS, RLS
+    mu: step of filter
+    filter_size: size of filter
 Usage example:
-`... | adaptive_filter`
+`... | adaptive_filter raw_signal desired_signal type="LMS", filter_size=32`
 
 ## Getting started
 ###  Prerequisites
